@@ -1,72 +1,109 @@
+"use client";
+import { useEffect, useState } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { ArrowUpRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  const [isTextFinished, setIsTextFinished] = useState(false);
+
+  useEffect(() => {
+    // Inicializa AOS
+    AOS.init({
+      duration: 1000, // Duración de la animación
+      once: true, // Solo animar una vez
+    });
+  }, []);
+
   return (
-    <div className="pb-20 pt-36">
-      {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
-       */}
+    <div className="pt-[8%] min-h-screen ">
+      {/* Spotlights */}
       <div>
         <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
+          className="absolute -top-[25vh] left-0 h-[80vh] w-[10vw] blur-[40px] opacity-0 animate-fade-in"
           fill="white"
         />
         <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="purple"
+          className="absolute top-10 left-0 h-[45vh] w-[10vw] blur-[40px] opacity-0 animate-fade-in"
+          fill="white"
         />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
-      </div>
-
-      {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
-       */}
-      <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       absolute top-0 left-0 flex items-center justify-center"
-      >
-        {/* Radial gradient for the container to give a faded look */}
-        <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
-         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
+        {/* Spotlights Derecha */}
+        <Spotlight
+          className="absolute -top-[25vh] right-0 h-[80vh] w-[10vw] blur-[40px] opacity-0 animate-fade-in scale-x-[-1] translate-x-[50%]"
+          fill="white"
+        />
+        <Spotlight
+          className="absolute bottom-10 right-0 h-[45vh] w-[10vw] blur-[40px] opacity-0 animate-fade-in scale-x-[-1] translate-x-[50%]"
+          fill="white"
         />
       </div>
 
+      {/* UI: grid */}
+      <div className="h-screen w-full dark:bg-[#010c0b] bg-white dark:bg-grid-[#00F6BC]/[0.10] bg-grid-[#0c2320] absolute top-0 left-0 flex items-center justify-center">
+        {/* Left Image */}
+        <img
+          src="/hero/logoL.png"
+          alt="Left decorative"
+          className="absolute left-20 h-[80vh] hidden lg:block"
+        />
+        {/* Right Image */}
+        <img
+          src="/hero/logoR.png"
+          alt="Right decorative"
+          className="absolute right-20 h-[80vh] hidden lg:block"
+        />
+        {/* Radial gradient */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#010c0b] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      </div>
+
+      {/* Hero Content */}
       <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
-          </p>
-
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center">
+          {/* Hero Icon */}
+       <img
+              src="/hero/HeroIcon.svg"
+              alt="HeroIcon ChipBids"
+            />
+          {/* Text Animation */}
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            words={"The Future of \n Prediction Markets"}
+            className="text-center text-[40px] md:text-5xl lg:text-7xl tracking-tight"
+            onComplete={() => setIsTextFinished(true)} // Marca que terminó
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
-          </p>
+          {/* Subtítulo */}
+          {isTextFinished && (
+            <p
+              className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              Trade, predict, and earn on the most innovative decentralized prediction
+              platform powered by Solana
+            </p>
+          )}
 
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          {/* Botones */}
+          {isTextFinished && (
+            <div className="flex space-x-4" data-aos="fade-up" data-aos-delay="600">
+              <a
+                href="#launch"
+                className="flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-[#00D8FF] to-[#094037] text-white font-semibold shadow-md hover:opacity-90 transition duration-300"
+              >
+                Launch App <ArrowUpRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="#whitepaper"
+                className="flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-[#1F3834] to-[#051B17] text-white font-semibold shadow-md hover:opacity-90 transition duration-300"
+              >
+                Download Whitepaper <ArrowUpRight className="ml-2 w-5 h-5" />
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>

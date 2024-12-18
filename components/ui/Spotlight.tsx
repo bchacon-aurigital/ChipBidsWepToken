@@ -4,6 +4,8 @@ import React from "react";
 type SpotlightProps = {
   className?: string;
   fill?: string;
+  style?: React.CSSProperties; // Permite pasar estilos inline
+
 };
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {

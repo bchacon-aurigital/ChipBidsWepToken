@@ -6,14 +6,17 @@ import { cn } from "@/lib/utils";
 export const TextGenerateEffect = ({
   words,
   className,
+  onComplete, // Nueva prop opcional
 }: {
   words: string;
   className?: string;
+  onComplete?: () => void; // Callback cuando la animación termina
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  let linesArray = words.split("\n");
+
   useEffect(() => {
-    console.log(wordsArray);
+    // Ejecutar la animación de las palabras
     animate(
       "span",
       {
@@ -22,23 +25,33 @@ export const TextGenerateEffect = ({
       {
         duration: 2,
         delay: stagger(0.2),
+        onComplete: onComplete, // Llamar a onComplete cuando todo termina
       }
     );
-  }, [scope.current]);
+  }, [scope.current, animate, onComplete]);
 
   const renderWords = () => {
+    let globalWordCount = 0; // Contador global de palabras
+
     return (
       <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
+        {linesArray.map((line, lineIdx) => {
+          const wordsInLine = line.split(" ");
           return (
-            <motion.span
-              key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 3 ? "text-purple" : "dark:text-white text-black"
-                } opacity-0`}
-            >
-              {word}{" "}
-            </motion.span>
+            <div key={`line-${lineIdx}`}>
+              {wordsInLine.map((word) => {
+                const currentWordIndex = globalWordCount++;
+                return (
+                  <motion.span
+                    key={`word-${currentWordIndex}`}
+                    className={`${currentWordIndex > 2 ? "text-[#00D8FF]" : "dark:text-white text-black"
+                      } opacity-0`}
+                  >
+                    {word}{" "}
+                  </motion.span>
+                );
+              })}
+            </div>
           );
         })}
       </motion.div>
@@ -47,13 +60,13 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      {/* mt-4 to my-4 */}
       <div className="my-4">
-        {/* remove  text-2xl from the original */}
-        <div className=" dark:text-white text-black leading-snug tracking-wide">
+        <div className="dark:text-white text-black leading-snug">
           {renderWords()}
         </div>
       </div>
     </div>
   );
 };
+
+export default TextGenerateEffect;
