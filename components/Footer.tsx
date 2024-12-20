@@ -1,9 +1,11 @@
-import { Instagram, Twitter, Github, Linkedin, MessageCircle } from "lucide-react";
+
+import { BsTwitterX, BsTelegram } from "react-icons/bs";
+
 import { ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full pt-20 pb-10">
+    <footer className="relative w-full pt-20 pb-10 px-5">
       {/* Background grid */}
       <div
         className="absolute inset-0 z-10 bg-center opacity-45"
@@ -35,7 +37,7 @@ const Footer = () => {
             />
 
             {/* Text content */}
-            <span className="relative z-10 flex items-center">
+            <span className="relative z-10 flex items-center ">
               Buy Token
               <ArrowUpRight className="ml-2 w-5 h-5" />
             </span>
@@ -50,10 +52,10 @@ const Footer = () => {
 
         <div className="flex items-center md:gap-3 gap-6">
           <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-            <Twitter className="w-5 h-5 text-white" />
+            <BsTwitterX className="w-5 h-5 text-white" />
           </div>
           <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-            <MessageCircle className="w-5 h-5 text-white" />
+            <BsTelegram className="w-5 h-5 text-white" />
           </div>
         </div>
       </div>

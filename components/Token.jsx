@@ -43,10 +43,10 @@ const Token = () => {
                 </div>
 
                 {/* Versión móvil */}
-                <h1 className="text-white text-5xl font-bold text-center sm:hidden">
+                <h1 className="text-white text-5xl font-bold text-center lg:hidden">
                     Token <span className="text-[#00F6BC]">Distribution</span>
                 </h1>
-                <div className="flex  h-[4rem] justify-center items-center sm:hidden ">
+                <div className="flex justify-center items-center lg:hidden ">
 
                     <div className="relative flex justify-center items-center">
                         {/* Primera imagen grande */}
