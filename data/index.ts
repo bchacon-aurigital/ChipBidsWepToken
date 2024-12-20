@@ -1,8 +1,8 @@
 export const navItems = [
-  { name: "Features", link: "#about" },
-  { name: "Tokenomics", link: "#projects" },
-  { name: "Roadmap", link: "#testimonials" },
-  { name: "Team", link: "#contact" },
+  { name: "Features", link: "#features" },
+  { name: "Tokenomics", link: "#Tokenomics" },
+  { name: "Roadmap", link: "#Roadmap" },
+  { name: "Team", link: "#Team" },
 ];
 
 export const gridItems = [
@@ -20,7 +20,7 @@ export const gridItems = [
     id: 2,
     title: "Community Governance",
     description: "Shape the future of ChipBids through decentralized governance and active participation.",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 opacity-70 md:h-[350px] lg:h-[400px]",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
@@ -41,10 +41,9 @@ export const gridItems = [
     title: "Instant Settlements",
     description: "Experience lightning-fast settlements powered by Solana's high-performance blockchain.",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
+    imgClassName: " mx-auto  justify-items-center h-[200px] py-4", 
     titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
+    img: "/Bg3.avif",
   },
 
   {
@@ -173,45 +172,37 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Platform Governance",
+    desc: "",
     className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
+    thumbnail: "/TokenUtily/CardIcon.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Transaction Fee Discounts",
+    desc: "",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    thumbnail: "/TokenUtily/CardIcon.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Staking Rewards",
+    desc: "",
     className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    thumbnail: "/TokenUtily/CardIcon.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Market Creation Rights",
+    desc: "",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/TokenUtily/CardIcon.svg",
   },
-];
-
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
+    {
+    id: 5,
+    title: "Premium Features Access",
+    desc: "",
+    className: "md:col-span-2",
+    thumbnail: "/TokenUtily/CardIcon.svg",
   },
 ];

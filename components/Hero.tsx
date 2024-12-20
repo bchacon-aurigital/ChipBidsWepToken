@@ -8,6 +8,8 @@ import { ArrowUpRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
+
 const Hero = () => {
   const [isTextFinished, setIsTextFinished] = useState(false);
 
@@ -36,25 +38,22 @@ const Hero = () => {
           className="absolute -top-[25vh] right-0 h-[80vh] w-[10vw] blur-[40px] opacity-0 animate-fade-in scale-x-[-1] translate-x-[50%]"
           fill="white"
         />
-        <Spotlight
-          className="absolute bottom-10 right-0 h-[45vh] w-[10vw] blur-[40px] opacity-0 animate-fade-in scale-x-[-1] translate-x-[50%]"
-          fill="white"
-        />
+  
       </div>
 
       {/* UI: grid */}
       <div className="h-screen w-full dark:bg-[#010c0b] bg-white dark:bg-grid-[#00F6BC]/[0.10] bg-grid-[#0c2320] absolute top-0 left-0 flex items-center justify-center">
         {/* Left Image */}
         <img
-          src="/hero/logoL.png"
+          src="/hero/logoL.svg"
           alt="Left decorative"
-          className="absolute left-20 h-[80vh] hidden lg:block"
+          className="absolute left-20 h-[80vh] hidden lg:block z-50"
         />
         {/* Right Image */}
         <img
-          src="/hero/logoR.png"
+          src="/hero/logoR.svg"
           alt="Right decorative"
-          className="absolute right-20 h-[80vh] hidden lg:block"
+          className="absolute right-20 h-[80vh] hidden lg:block z-50"
         />
         {/* Radial gradient */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#010c0b] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
@@ -92,15 +91,38 @@ const Hero = () => {
             <div className="flex space-x-4" data-aos="fade-up" data-aos-delay="600">
               <a
                 href="#launch"
-                className="flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-[#00D8FF] to-[#094037] text-white font-semibold shadow-md hover:opacity-90 transition duration-300"
+                className="relative inline-flex items-center justify-center overflow-hidden rounded-lg p-[1px] group"
               >
-                Launch App <ArrowUpRight className="ml-2 w-5 h-5" />
+                {/* Animated border */}
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-gradient-to-r from-[#00D8FF] to-[#094037]" />
+
+                {/* Button content */}
+                <span className="relative flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-[#00D8FF] to-[#094037] text-white font-semibold w-full ">
+                  {/* Shine effect */}
+                  <span
+                    className="absolute inset-0 translate-x-[-100%] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:translate-x-[100%] transition-transform duration-1000"
+                  />
+
+                  {/* Text content */}
+                  <span className="relative z-10 flex items-center">
+                    Launch App
+                    <ArrowUpRight className="ml-2 w-5 h-5" />
+                  </span>
+                </span>
               </a>
+
               <a
                 href="#whitepaper"
-                className="flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-[#1F3834] to-[#051B17] text-white font-semibold shadow-md hover:opacity-90 transition duration-300"
+                className="relative inline-flex items-center justify-center overflow-hidden rounded-lg p-[1px]"
               >
-                Download Whitepaper <ArrowUpRight className="ml-2 w-5 h-5" />
+                {/* Animated border */}
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00D8FF_0%,#1F3834_50%,#094037_100%)]" />
+
+                {/* Button content */}
+                <span className="relative flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-[#1F3834] to-[#051B17] text-white font-semibold w-full hover:opacity-90 transition duration-300 shadow-md">
+                  Download Whitepaper
+                  <ArrowUpRight className="ml-2 w-5 h-5" />
+                </span>
               </a>
             </div>
           )}

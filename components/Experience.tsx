@@ -5,47 +5,81 @@ import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
   return (
-    <div className="py-20 w-full">
-      <h1 className="heading">
-        My <span className="text-purple">work experience</span>
+    <div className="py-20 px-5 sm:px-10 w-full flex flex-col items-center bg-[#0B2320] cursor-default">
+      {/* Título centrado */}
+      <h1 className="text-white text-5xl font-bold text-center mb-24">
+        Token <span className="text-[#00F6BC]">Utility</span>
       </h1>
 
-      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
-          <Button
-            key={card.id}
-            //   random duration will be fun , I think , may be not
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="1.75rem"
-            style={{
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              // add this border radius to make it more rounded so that the moving border is more realistic
-              borderRadius: `calc(1.75rem* 0.96)`,
-            }}
-            // remove bg-white dark:bg-slate-900
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-          >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
-                src={card.thumbnail}
-                alt={card.thumbnail}
-                className="lg:w-32 md:w-20 w-16"
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
-                </h1>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p>
+      {/* Contenedor de dos columnas con flex */}
+      <div className="w-full max-w-6xl flex flex-col lg:flex-row items-start lg:items-center mx-auto">
+        {/* Columna izquierda para la imagen */}
+        <div className="w-full lg:w-[45%] flex justify-center mb-8 lg:mb-0">
+          <img
+            src="/TokenUtily/Logo.svg"
+            alt="Left Illustration"
+            className="w-2/3 lg:w-full object-contain"
+          />
+        </div>
+
+        {/* Columna derecha para los cards */}
+        <div className="w-full lg:w-[60%] flex flex-col gap-6">
+          {workExperience.map((card) => (
+            card.id % 2 === 0 ? (
+              <div
+                key={card.id}
+                className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 relative overflow-hidden rounded-[1.75rem] bg-[#010C0B] transition-all duration-1000 ease-in-out hover:before:opacity-100 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[#010C0B] before:via-[#010C0B] before:to-[#0A7269] before:opacity-0 before:transition-opacity before:duration-1000"
+              >
+                <div className="flex lg:flex-row items-center p-3 py-4 md:py-6 md:px-5 lg:py-8 lg:px-10 gap-2 w-full mx-7 relative">
+                  <div className="flex items-center justify-center w-24 h-24 flex-shrink-0">
+                    <img
+                      src={card.thumbnail}
+                      alt={card.title}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                  <div className="lg:ms-5">
+                    <h1 className="text-start text-lg md:text-2xl font-bold">
+                      {card.title}
+                    </h1>
+                    <p className="text-start text-white-100 mt-2 text-sm font-semibold">
+                      {card.desc}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </Button>
-        ))}
+            ) : (
+              <Button
+                key={card.id}
+                duration={Math.floor(Math.random() * 10000) + 10000}
+                borderRadius="1.75rem"
+                style={{
+                  background: "#051714",
+                  borderRadius: "calc(1.75rem * 0.96)",
+                }}
+                className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-default	"
+              >
+                <div className="flex lg:flex-row items-center p-3 py-4 md:py-6 md:px-5 lg:py-8 lg:px-10 gap-2 w-full mx-7">
+                  <div className="flex items-center justify-center w-24 h-24 flex-shrink-0">
+                    <img
+                      src={card.thumbnail}
+                      alt={card.title}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                  <div className="lg:ms-5">
+                    <h1 className="text-start text-lg md:text-2xl font-bold">
+                      {card.title}
+                    </h1>
+                    <p className="text-start text-white-100 mt-2 text-sm font-semibold">
+                      {card.desc}
+                    </p>
+                  </div>
+                </div>
+              </Button>
+            )
+          ))}
+        </div>
       </div>
     </div>
   );

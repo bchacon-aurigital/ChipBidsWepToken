@@ -72,19 +72,19 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 bg-gradient-to-br from-[#031714] to-[#0B231F]",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition-all duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4 bg-gradient-to-br from-[#031714] to-[#0B231F] ",
         className
       )}
     >
       {/* Imagen principal */}
-      <div className={`${id === 6 && "flex justify-center"} h-full `}>
+      <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#03201B] to-transparent z-10 pointer-events-none"></div>
         <div className="w-full h-full absolute">
           {img && (
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center  lg:z-50")}
+              className={cn(imgClassName, "object-cover object-center lg:z-50")}
             />
           )}
         </div>
@@ -114,9 +114,10 @@ export const BentoGridItem = ({
           )}
         >
           {/* Título */}
+          <div className="hover:translate-x-2 transition-all duration-500 z-40">
           <div
             className={cn(
-              "font-sans max-w-96 font-bold text-white z-10",
+              "font-sans max-w-96 font-bold text-white",
               id === 6 ? "text-sm md:text-base" : "text-lg lg:text-3xl" // Título más pequeño solo en card 6
             )}
           >
@@ -128,31 +129,31 @@ export const BentoGridItem = ({
           <div className={cn("font-sans font-normal md:max-w-32 lg:max-w-full md:text-md lg:text-xl text-[#C1C2D3] z-20 mt-2",
             id === 5 || id === 3 ? "lg:max-w-60" : "lg:max-w-full")}>
             {description}
-          </div>
+          </div></div>
 
           {/* GridGlobe */}
           {id === 2 && <GridGlobe />}
 
           {/* Tech Stack */}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+            <div className="flex gap-1 lg:gap-2 w-fit absolute -right-3 lg:-right-5 -z-0">
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="lg:py-6 lg:px-8 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#1F3834]"
                   >
                     {item}
                   </span>
                 ))}
                 <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
               </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
                 <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    className="lg:py-6 lg:px-8 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#1F3834]"
                   >
                     {item}
                   </span>
@@ -163,16 +164,22 @@ export const BentoGridItem = ({
 
           {/* Copiar email */}
           {id === 6 && (
-            <div className=" relative">
-              <div className="absolute right-0">
+            <div className=" relative z-20">
+              <div className="absolute right-0 ">
               </div>
-              <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
-              />
+              <button
+                onClick={handleCopy}
+                className="relative inline-flex items-center justify-center h-12 w-full md:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none"
+              >
+                {/* Magic border animation */}
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00D8FF_0%,#1F3834_50%,#094037_100%)]" />
+
+                {/* Button content */}
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#07211C] px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2">
+                  <IoCopyOutline />
+                  {copied ? "Email is Copied!" : "Copy my email address"}
+                </span>
+              </button>
             </div>
           )}
 
