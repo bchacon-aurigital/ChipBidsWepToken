@@ -1,4 +1,3 @@
-
 import { BsTwitterX, BsTelegram } from "react-icons/bs";
 
 import { ArrowUpRight } from "lucide-react";
@@ -8,13 +7,13 @@ const Footer = () => {
     <footer className="relative w-full pt-20 pb-10 px-5">
       {/* Background grid */}
       <div
-        className="absolute inset-0 z-10 bg-center opacity-45"
+        className="absolute inset-0 z-0 bg-center opacity-45 pointer-events-none"
         style={{
           backgroundImage: "url('/footer-grid.svg')",
         }}
       />
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center z-10 relative">
         <h1 className="heading lg:max-w-[50vw]">
           Shape <span className="text-[#00F6BC]">the Future </span>of Predictions
         </h1>
@@ -24,7 +23,7 @@ const Footer = () => {
 
         <a
           href="#launch"
-          className="relative inline-flex items-center justify-center overflow-hidden rounded-lg p-[1px] group"
+          className="relative inline-flex items-center justify-center overflow-hidden rounded-lg p-[1px] group z-10"
         >
           {/* Animated border */}
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-gradient-to-r from-[#00D8FF] to-[#094037]" />
@@ -37,7 +36,7 @@ const Footer = () => {
             />
 
             {/* Text content */}
-            <span className="relative z-10 flex items-center ">
+            <span className="relative z-10 flex items-center">
               Buy Token
               <ArrowUpRight className="ml-2 w-5 h-5" />
             </span>
@@ -45,18 +44,31 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center z-10 relative">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright ©2024 ChipBids
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
-          <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+          {/* Botón de Twitter */}
+          <a
+            href="https://x.com/chipsbids?s=11&t=3NGgd0Po9RlxgNjhuZNXwA"
+            className="w-10 h-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 z-10"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsTwitterX className="w-5 h-5 text-white" />
-          </div>
-          <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+          </a>
+
+          {/* Botón de Telegram */}
+          <a
+            href="https://t.me/chipsbids"
+            className="w-10 h-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 z-10"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsTelegram className="w-5 h-5 text-white" />
-          </div>
+          </a>
         </div>
       </div>
     </footer>
