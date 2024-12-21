@@ -1,9 +1,12 @@
 "use client";
-
-import { navItems } from "@/data";
-
 import dynamic from "next/dynamic";
 
+const navItems = [
+  { name: "Features", link: "#features" },
+  { name: "Tokenomics", link: "#Tokenomics" },
+  { name: "Roadmap", link: "#Roadmap" },
+  { name: "Team", link: "#Team" },
+];
 // Lazy load components
 import Hero from "@/components/Hero";
 const Grid = dynamic(() => import("@/components/Grid"), { ssr: false });

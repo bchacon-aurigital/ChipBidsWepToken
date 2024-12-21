@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "features": "Features",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Roadmap",
+    "team": "Team",
+    "launchApp": "Launch App"
+  },
+  "hero": {
+    "title": "The Future of Prediction Markets",
+    "subtitle": "Trade, predict, and earn on the most innovative decentralized prediction platform powered by Solana",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "Learn More"
+    }
+  },
+  "features": {
+    "title": "Key Features",
+    "items": [
+      {
+        "title": "Low Fees",
+        "description": "Industry-leading 0.3% transaction fees, maximizing your profits while ensuring platform sustainability."
+      },
+      {
+        "title": "Secure & Transparent",
+        "description": "Built on Solana blockchain with advanced security measures and fully transparent operations."
+      },
+      {
+        "title": "Multiple Markets",
+        "description": "Trade on sports, politics, crypto, and global events with real-time data and accurate oracles."
+      },
+      {
+        "title": "Community Governance",
+        "description": "Shape the future of ChipBids through decentralized governance and active participation."
+      },
+      {
+        "title": "Advanced Analytics",
+        "description": "Access powerful analytics tools and insights to make informed predictions."
+      },
+      {
+        "title": "Instant Settlements",
+        "description": "Experience lightning-fast settlements powered by Solana's high-performance blockchain."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Tokenomics",
+    "supply": {
+      "title": "Total Supply",
+      "value": "1,000,000,000 CHIPS"
+    },
+    "distribution": {
+      "title": "Token Distribution",
+      "items": {
+        "liquidity": "Liquidity Pool - 60%",
+        "development": "Ecosystem Development - 15%",
+        "incentives": "User Incentives - 10%",
+        "marketing": "Marketing - 10%",
+        "team": "Team and Advisors - 5%"
+      }
+    },
+    "utility": {
+      "title": "Token Utility",
+      "items": [
+        "Platform governance",
+        "Transaction fee discounts",
+        "Staking rewards",
+        "Market creation rights",
+        "Premium features access"
+      ]
+    }
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "phases": [
+      {
+        "period": "Q1 2025",
+        "title": "Platform Launch",
+        "items": [
+          "Beta testing launch",
+          "Initial market creation",
+          "Community building initiatives",
+          "Basic features deployment"
+        ]
+      },
+      {
+        "period": "Q2 2025",
+        "title": "Expansion Phase",
+        "items": [
+          "CFTC registration process",
+          "New market types introduction",
+          "Mobile app launch",
+          "Advanced features rollout"
+        ]
+      },
+      {
+        "period": "Q3 2025",
+        "title": "Global Growth",
+        "items": [
+          "International market expansion",
+          "Additional language support",
+          "Strategic partnerships",
+          "Enhanced platform features"
+        ]
+      }
+    ]
+  }
+}

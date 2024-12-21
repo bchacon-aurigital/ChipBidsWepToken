@@ -1,0 +1,108 @@
+{
+  "navigation": {
+    "features": "Características",
+    "tokenomics": "Tokenomía",
+    "roadmap": "Hoja de Ruta",
+    "team": "Equipo",
+    "launchApp": "Iniciar App"
+  },
+  "hero": {
+    "title": "El Futuro de los Mercados Predictivos",
+    "subtitle": "Opera, predice y gana en la plataforma de predicción descentralizada más innovadora impulsada por Solana",
+    "cta": {
+      "primary": "Comenzar",
+      "secondary": "Más Información"
+    }
+  },
+  "features": {
+    "title": "Características Principales",
+    "items": [
+      {
+        "title": "Comisiones Bajas",
+        "description": "Comisiones de transacción líderes en la industria del 0.3%, maximizando tus ganancias mientras aseguramos la sostenibilidad de la plataforma."
+      },
+      {
+        "title": "Seguro y Transparente",
+        "description": "Construido en la blockchain de Solana con medidas de seguridad avanzadas y operaciones totalmente transparentes."
+      },
+      {
+        "title": "Múltiples Mercados",
+        "description": "Opera en deportes, política, crypto y eventos globales con datos en tiempo real y oráculos precisos."
+      },
+      {
+        "title": "Gobernanza Comunitaria",
+        "description": "Dale forma al futuro de ChipBids a través de la gobernanza descentralizada y la participación activa."
+      },
+      {
+        "title": "Análisis Avanzado",
+        "description": "Accede a potentes herramientas de análisis e insights para realizar predicciones informadas."
+      },
+      {
+        "title": "Liquidaciones Instantáneas",
+        "description": "Experimenta liquidaciones ultrarrápidas impulsadas por la blockchain de alto rendimiento de Solana."
+      }
+    ]
+  },
+  "tokenomics": {
+    "title": "Tokenomía",
+    "supply": {
+      "title": "Suministro Total",
+      "value": "1,000,000,000 CHIPS"
+    },
+    "distribution": {
+      "title": "Distribución de Tokens",
+      "items": {
+        "liquidity": "Pool de Liquidez - 60%",
+        "development": "Desarrollo del Ecosistema - 15%",
+        "incentives": "Incentivos de Usuario - 10%",
+        "marketing": "Marketing - 10%",
+        "team": "Equipo y Asesores - 5%"
+      }
+    },
+    "utility": {
+      "title": "Utilidad del Token",
+      "items": [
+        "Gobernanza de la plataforma",
+        "Descuentos en comisiones",
+        "Recompensas por staking",
+        "Derechos de creación de mercados",
+        "Acceso a características premium"
+      ]
+    }
+  },
+  "roadmap": {
+    "title": "Hoja de Ruta",
+    "phases": [
+      {
+        "period": "Q1 2025",
+        "title": "Lanzamiento de Plataforma",
+        "items": [
+          "Lanzamiento de prueba beta",
+          "Creación inicial de mercados",
+          "Iniciativas de construcción de comunidad",
+          "Despliegue de características básicas"
+        ]
+      },
+      {
+        "period": "Q2 2025",
+        "title": "Fase de Expansión",
+        "items": [
+          "Proceso de registro CFTC",
+          "Introducción de nuevos tipos de mercado",
+          "Lanzamiento de app móvil",
+          "Despliegue de características avanzadas"
+        ]
+      },
+      {
+        "period": "Q3 2025",
+        "title": "Crecimiento Global",
+        "items": [
+          "Expansión a mercados internacionales",
+          "Soporte de idiomas adicionales",
+          "Alianzas estratégicas",
+          "Mejoras en características de la plataforma"
+        ]
+      }
+    ]
+  }
+}

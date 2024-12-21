@@ -1,11 +1,49 @@
 import React from "react";
-
-import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+
+
+const workExperience = [
+  {
+    id: 1,
+    title: "Platform Governance",
+    desc: "",
+    className: "md:col-span-2",
+    thumbnail: "/TokenUtily/CardIcon.svg",
+  },
+  {
+    id: 2,
+    title: "Transaction Fee Discounts",
+    desc: "",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/TokenUtily/CardIcon.svg",
+  },
+  {
+    id: 3,
+    title: "Staking Rewards",
+    desc: "",
+    className: "md:col-span-2", // change to md:col-span-2
+    thumbnail: "/TokenUtily/CardIcon.svg",
+  },
+  {
+    id: 4,
+    title: "Market Creation Rights",
+    desc: "",
+    className: "md:col-span-2",
+    thumbnail: "/TokenUtily/CardIcon.svg",
+  },
+  {
+    id: 5,
+    title: "Premium Features Access",
+    desc: "",
+    className: "md:col-span-2",
+    thumbnail: "/TokenUtily/CardIcon.svg",
+  },
+];
+
 
 const Experience = () => {
   return (
-    <div className="py-20 px-5 sm:px-10 w-full flex flex-col items-center bg-[#0B2320] cursor-default">
+    <div className="py-20 px-5 sm:px-10 w-full flex flex-col items-center bg-[#0B2320] cursor-default ">
       {/* Título centrado */}
       <h1 className="text-white text-5xl font-bold text-center mb-24">
         Token <span className="text-[#00F6BC]">Utility</span>
