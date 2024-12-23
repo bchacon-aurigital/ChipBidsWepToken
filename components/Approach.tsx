@@ -25,7 +25,7 @@ const Approach = () => {
           <Card
             key={index}
             title={`${phase.period} - ${phase.title}`}
-            icon={<AceternityIcon order={`Phase ${index + 1}`} />}
+            icon={<AceternityIcon order={t("roadmap.phase", { phase: index + 1 })} />}
             des={phase.items.slice(0, 4).map((item, i) => (
               <li key={i}>{item}</li>
             ))}

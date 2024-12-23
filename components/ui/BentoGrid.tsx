@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
-import MagicButton from "../MagicButton";
 
 export const BentoGrid = ({
   className,
@@ -115,21 +114,21 @@ export const BentoGridItem = ({
         >
           {/* Título */}
           <div className="hover:translate-x-2 transition-all duration-500 z-40">
-          <div
-            className={cn(
-              "font-sans max-w-96 font-bold text-white",
-              id === 6 ? "text-sm md:text-base" : "text-lg lg:text-3xl" // Título más pequeño solo en card 6
-            )}
-          >
-            {title}
-          </div>
+            <div
+              className={cn(
+                "font-sans max-w-96 font-bold text-white",
+                id === 6 ? "text-sm md:text-base" : "text-lg lg:text-3xl" // Título más pequeño solo en card 6
+              )}
+            >
+              {title}
+            </div>
 
-          {/* Descripción - ahora debajo del título */}
+            {/* Descripción - ahora debajo del título */}
 
-          <div className={cn("font-sans font-normal md:max-w-32 lg:max-w-full md:text-md lg:text-xl text-[#C1C2D3] z-20 mt-2",
-            id === 5 || id === 3 ? "lg:max-w-60" : "lg:max-w-full")}>
-            {description}
-          </div></div>
+            <div className={cn("font-sans font-normal md:max-w-32 lg:max-w-full md:text-md lg:text-xl text-[#C1C2D3] z-20 mt-2",
+              id === 5 || id === 3 ? "lg:max-w-60" : "lg:max-w-full")}>
+              {description}
+            </div></div>
 
           {/* GridGlobe */}
           {id === 2 && <GridGlobe />}
@@ -146,10 +145,10 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#1F3834]"></span>
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
-                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3 rounded-lg text-center bg-[#1F3834]"></span>
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
@@ -177,13 +176,11 @@ export const BentoGridItem = ({
                 {/* Button content */}
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-[#07211C] px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2">
                   <IoCopyOutline />
-                  {copied ? "Email is Copied!" : "Copy my email address"}
+                  {copied ? "Email is Copied!" : "Email"}
                 </span>
               </button>
             </div>
           )}
-
-          
         </div>
       </div>
     </div>

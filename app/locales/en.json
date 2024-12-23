@@ -59,20 +59,22 @@
         "marketing": "Marketing - 10%",
         "team": "Team and Advisors - 5%"
       }
-    }},
-    "utility": {
-      "title": "Token ",
-      "title2": "Utility",
-      "items": [
-        "Platform governance",
-        "Transaction fee discounts",
-        "Staking rewards",
-        "Market creation rights",
-        "Premium features access"
-      ]
-    },
+    }
+  },
+  "utility": {
+    "title": "Token ",
+    "title2": "Utility",
+    "items": [
+      "Platform governance",
+      "Transaction fee discounts",
+      "Staking rewards",
+      "Market creation rights",
+      "Premium features access"
+    ]
+  },
   "roadmap": {
     "title": "Roadmap",
+    "phase": "Phase {{phase}}",
     "phases": [
       {
         "period": "Q1 2025",
@@ -135,7 +137,7 @@
       "telegram": "Join ChipBids on Telegram"
     }
   },
-    "textEffect": {
-      "highlightIndex": 3
-    }
+  "textEffect": {
+    "highlightIndex": 3
+  }
 }

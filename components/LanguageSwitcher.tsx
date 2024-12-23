@@ -9,7 +9,7 @@ const LanguageSwitcher: React.FC = () => {
   };
 
   return (
-    <div className="fixed right-5 top-20 flex flex-col gap-2 z-50">
+    <div className="fixed right-5 top-40 flex flex-col gap-2 z-50 ">
       {/* Botón en inglés */}
       <button
         onClick={() => changeLanguage('en')}
