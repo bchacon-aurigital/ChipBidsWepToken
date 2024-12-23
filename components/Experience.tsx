@@ -1,52 +1,55 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/MovingBorders";
 
-
-const workExperience = [
-  {
-    id: 1,
-    title: "Platform Governance",
-    desc: "",
-    className: "md:col-span-2",
-    thumbnail: "/TokenUtily/CardIcon.svg",
-  },
-  {
-    id: 2,
-    title: "Transaction Fee Discounts",
-    desc: "",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/TokenUtily/CardIcon.svg",
-  },
-  {
-    id: 3,
-    title: "Staking Rewards",
-    desc: "",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/TokenUtily/CardIcon.svg",
-  },
-  {
-    id: 4,
-    title: "Market Creation Rights",
-    desc: "",
-    className: "md:col-span-2",
-    thumbnail: "/TokenUtily/CardIcon.svg",
-  },
-  {
-    id: 5,
-    title: "Premium Features Access",
-    desc: "",
-    className: "md:col-span-2",
-    thumbnail: "/TokenUtily/CardIcon.svg",
-  },
-];
-
-
 const Experience = () => {
+  const { t } = useTranslation();
+
+  const workExperience = [
+    {
+      id: 1,
+      title: t("utility.items.0"),
+      desc: "",
+      className: "md:col-span-2",
+      thumbnail: "/TokenUtily/CardIcon.svg",
+    },
+    {
+      id: 2,
+      title: t("utility.items.1"),
+      desc: "",
+      className: "md:col-span-2",
+      thumbnail: "/TokenUtily/CardIcon.svg",
+    },
+    {
+      id: 3,
+      title: t("utility.items.2"),
+      desc: "",
+      className: "md:col-span-2",
+      thumbnail: "/TokenUtily/CardIcon.svg",
+    },
+    {
+      id: 4,
+      title: t("utility.items.3"),
+      desc: "",
+      className: "md:col-span-2",
+      thumbnail: "/TokenUtily/CardIcon.svg",
+    },
+    {
+      id: 5,
+      title: t("utility.items.4"),
+      desc: "",
+      className: "md:col-span-2",
+      thumbnail: "/TokenUtily/CardIcon.svg",
+    },
+  ];
+
   return (
-    <div className="py-20 px-5 sm:px-10 w-full flex flex-col items-center bg-[#0B2320] cursor-default ">
+    <div className="py-20 px-5 sm:px-10 w-full flex flex-col items-center bg-[#0B2320] cursor-default">
       {/* Título centrado */}
       <h1 className="text-white text-5xl font-bold text-center mb-24">
-        Token <span className="text-[#00F6BC]">Utility</span>
+        {t("utility.title")} <span className="text-[#00F6BC]">{t("utility.title2")}</span>
       </h1>
 
       {/* Contenedor de dos columnas con flex */}

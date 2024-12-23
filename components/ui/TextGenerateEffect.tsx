@@ -1,6 +1,8 @@
 "use client";
+
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
+import { useTranslation } from "react-i18next"; // Para manejar la traducción
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
@@ -13,6 +15,9 @@ export const TextGenerateEffect = ({
   onComplete?: () => void; // Callback cuando la animación termina
 }) => {
   const [scope, animate] = useAnimate();
+  const { t } = useTranslation(); // Hook para obtener las traducciones
+  const highlightIndex = parseInt(t("textEffect.highlightIndex") as string); // Obtener el índice dinámico desde el JSON
+
   let linesArray = words.split("\n");
 
   useEffect(() => {
@@ -44,7 +49,9 @@ export const TextGenerateEffect = ({
                 return (
                   <motion.span
                     key={`word-${currentWordIndex}`}
-                    className={`${currentWordIndex > 2 ? "text-[#00D8FF]" : "dark:text-white text-black"
+                    className={`${currentWordIndex >= highlightIndex // Cambia el índice dinámicamente desde el JSON
+                        ? "text-[#00D8FF]"
+                        : "dark:text-white text-black"
                       } opacity-0`}
                   >
                     {word}{" "}

@@ -15,31 +15,32 @@
     }
   },
   "features": {
-    "title": "Key Features",
+    "title": "Key",
+    "title2": "Features",
     "items": [
-      {
-        "title": "Low Fees",
-        "description": "Industry-leading 0.3% transaction fees, maximizing your profits while ensuring platform sustainability."
-      },
       {
         "title": "Secure & Transparent",
         "description": "Built on Solana blockchain with advanced security measures and fully transparent operations."
-      },
-      {
-        "title": "Multiple Markets",
-        "description": "Trade on sports, politics, crypto, and global events with real-time data and accurate oracles."
       },
       {
         "title": "Community Governance",
         "description": "Shape the future of ChipBids through decentralized governance and active participation."
       },
       {
-        "title": "Advanced Analytics",
-        "description": "Access powerful analytics tools and insights to make informed predictions."
+        "title": "Multiple Markets",
+        "description": "Trade on sports, politics, crypto, and global events with real-time data and accurate oracles."
       },
       {
         "title": "Instant Settlements",
         "description": "Experience lightning-fast settlements powered by Solana's high-performance blockchain."
+      },
+      {
+        "title": "Advanced Analytics",
+        "description": "Access powerful analytics tools and insights to make informed predictions."
+      },
+      {
+        "title": "Low Fees",
+        "description": "Industry-leading 0.3% transaction fees, maximizing your profits while ensuring platform sustainability."
       }
     ]
   },
@@ -58,9 +59,10 @@
         "marketing": "Marketing - 10%",
         "team": "Team and Advisors - 5%"
       }
-    },
+    }},
     "utility": {
-      "title": "Token Utility",
+      "title": "Token ",
+      "title2": "Utility",
       "items": [
         "Platform governance",
         "Transaction fee discounts",
@@ -68,8 +70,7 @@
         "Market creation rights",
         "Premium features access"
       ]
-    }
-  },
+    },
   "roadmap": {
     "title": "Roadmap",
     "phases": [
@@ -104,5 +105,37 @@
         ]
       }
     ]
-  }
+  },
+  "tokenomics": {
+    "title": "Token Distribution",
+    "desktop": {
+      "title": "Token",
+      "highlight": "Distribution",
+      "image": "/TokenDistribution/Distribution_en.svg"
+    },
+    "mobile": {
+      "title": "Token",
+      "highlight": "Distribution",
+      "image": "/TokenDistribution/TokenDistributionMobile_en.svg"
+    },
+    "alt": {
+      "distribution": "Distribution",
+      "token": "Token"
+    }
+  },
+  "footer": {
+    "title": "Shape",
+    "title2": " the Future",
+    "title3": " of Predictions",
+    "description": "Join the next-gen prediction market platform where transparency meets opportunity. Get early access to premium features and governance rights with CHIP tokens.",
+    "buyToken": "Buy Token",
+    "copyright": "Copyright ©2024 ChipBids",
+    "social": {
+      "twitter": "Follow ChipBids on Twitter",
+      "telegram": "Join ChipBids on Telegram"
+    }
+  },
+    "textEffect": {
+      "highlightIndex": 3
+    }
 }

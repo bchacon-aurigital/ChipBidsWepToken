@@ -14,35 +14,39 @@
       "secondary": "Más Información"
     }
   },
-  "features": {
-    "title": "Características Principales",
-    "items": [
-      {
-        "title": "Comisiones Bajas",
-        "description": "Comisiones de transacción líderes en la industria del 0.3%, maximizando tus ganancias mientras aseguramos la sostenibilidad de la plataforma."
-      },
-      {
-        "title": "Seguro y Transparente",
-        "description": "Construido en la blockchain de Solana con medidas de seguridad avanzadas y operaciones totalmente transparentes."
-      },
-      {
-        "title": "Múltiples Mercados",
-        "description": "Opera en deportes, política, crypto y eventos globales con datos en tiempo real y oráculos precisos."
-      },
-      {
-        "title": "Gobernanza Comunitaria",
-        "description": "Dale forma al futuro de ChipBids a través de la gobernanza descentralizada y la participación activa."
-      },
-      {
-        "title": "Análisis Avanzado",
-        "description": "Accede a potentes herramientas de análisis e insights para realizar predicciones informadas."
-      },
-      {
-        "title": "Liquidaciones Instantáneas",
-        "description": "Experimenta liquidaciones ultrarrápidas impulsadas por la blockchain de alto rendimiento de Solana."
-      }
+"features": {
+  "title": "Características",
+  "title2": "Principales",
+  "items": [
+    {
+      "title": "Seguro y Transparente",
+      "description": "Construido en la blockchain de Solana con medidas de seguridad avanzadas y operaciones totalmente transparentes."
+    },
+    {
+      "title": "Gobernanza Comunitaria",
+      "description": "Dale forma al futuro de ChipBids a través de la gobernanza descentralizada y la participación activa."
+    },
+    {
+      "title": "Múltiples Mercados",
+      "description": "Opera en deportes, política, crypto y eventos globales con datos en tiempo real y oráculos precisos."
+    },
+    {
+      "title": "Liquidaciones Instantáneas",
+      "description": "Experimenta liquidaciones ultrarrápidas impulsadas por la blockchain de alto rendimiento de Solana."
+    },
+    {
+      "title": "Análisis Avanzado",
+      "description": "Accede a potentes herramientas de análisis e insights para realizar predicciones informadas."
+    },
+    {
+      "title": "Comisiones Bajas",
+      "description": "Comisiones de transacción líderes en la industria del 0.3%, maximizando tus ganancias mientras aseguramos la sostenibilidad de la plataforma."
+    }
     ]
   },
+
+
+
   "tokenomics": {
     "title": "Tokenomía",
     "supply": {
@@ -58,9 +62,10 @@
         "marketing": "Marketing - 10%",
         "team": "Equipo y Asesores - 5%"
       }
-    },
+    }},
     "utility": {
       "title": "Utilidad del Token",
+      "title2": " Token",
       "items": [
         "Gobernanza de la plataforma",
         "Descuentos en comisiones",
@@ -68,8 +73,7 @@
         "Derechos de creación de mercados",
         "Acceso a características premium"
       ]
-    }
-  },
+    },
   "roadmap": {
     "title": "Hoja de Ruta",
     "phases": [
@@ -104,5 +108,37 @@
         ]
       }
     ]
-  }
+  },
+    "tokenomics": {
+      "title": "Distribución de Tokens",
+      "desktop": {
+        "title": "Distribución de",
+        "highlight": "Tokens",
+        "image": "/TokenDistribution/Distribution_es.svg"
+      },
+      "mobile": {
+        "title": "Distribución de",
+        "highlight": "Tokens",
+        "image": "/TokenDistribution/TokenDistributionMobile_es.svg"
+      },
+      "alt": {
+        "distribution": "Distribución",
+        "token": "Token"
+      }
+    },
+    "footer": {
+      "title": "Da forma",
+      "title2": " al futuro",
+      "title3": " de las predicciones",
+      "description": "Únete a la plataforma de mercados predictivos de próxima generación donde la transparencia se encuentra con la oportunidad. Obtén acceso anticipado a funciones premium y derechos de gobernanza con tokens CHIP.",
+      "buyToken": "Comprar Token",
+      "copyright": "Derechos de autor ©2024 ChipBids",
+      "social": {
+        "twitter": "Sigue a ChipBids en Twitter",
+        "telegram": "Únete a ChipBids en Telegram"
+      }
+    },
+    "textEffect": {
+      "highlightIndex": 4
+    }
 }

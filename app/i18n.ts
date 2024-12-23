@@ -10,7 +10,7 @@ i18n.use(initReactI18next).init({
     en: { translation: en },
     es: { translation: es },
   },
-  lng: 'en', // Idioma predeterminado
+  lng: 'es', // Idioma predeterminado
   fallbackLng: 'en', // Idioma de respaldo
   interpolation: {
     escapeValue: false, // React ya protege contra XSS

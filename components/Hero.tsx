@@ -1,10 +1,10 @@
 "use client";
-
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+const TextGenerateEffect = dynamic(() => import("./ui/TextGenerateEffect"), { ssr: false });
 import { ArrowUpRight } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
